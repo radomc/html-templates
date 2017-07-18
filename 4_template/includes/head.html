@@ -1,0 +1,122 @@
+<link href='http://fonts.googleapis.com/css?family=Ubuntu:400,500,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Arvo:400' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="/css/styles.css" type='text/css'>
+<link rel="stylesheet" href="/css/jquery.selectbox.css" type='text/css'> 
+<link rel="stylesheet" href="/css/meanmenu.css" type='text/css'>
+<link rel="stylesheet" href="/css/responsive-tables.css" type='text/css'>
+<link rel="stylesheet" href="/css/media_queries.css" type='text/css'>
+<link rel="stylesheet" href="/css/colors.css">
+
+
+<script src="/js/jquery-1.11.1.min.js"></script>
+<script src="/js/jquery-ui-1.10.4.custom.js"></script>
+<script src="/js/jquery.selectbox-0.2.js"></script>
+<script src="/js/responsive-tables.js"></script>
+<script src="/js/jquery.meanmenu.js"></script>
+
+
+<script>
+$(window).scroll(function(e){ 
+	var navbar = $('nav.big-nav'); 
+	var st = $(window).scrollTop();
+	if (st > 30 && $(window).width() > 480 ) {
+		navbar.css({
+			position: "fixed",
+			top: "0px"
+		});
+	} else {
+		if(st <= 30) {
+                navbar.css({
+                    position: "relative",
+                    top: ""
+                });
+            }
+    }
+});
+$(function() {		
+	var dialogOptions = {
+		autoOpen: false,
+		closeOnEscape: true,
+		draggable: false,
+		resizable: false,
+		modal: true,
+		closeText: "",
+		open: function( event, ui ) {
+			$('body').addClass('stop-scrolling');
+		},
+		close: function( event, ui ) {
+			$('body').removeClass('stop-scrolling');
+		}
+	};
+	$( ".dialog" ).dialog($.extend({ }, dialogOptions));
+	$( document ).on("click", ".ui-widget-overlay",function(){
+		$(".ui-dialog-content").dialog("close");
+	});
+	$("#cp-login-form").dialog($.extend({ }, dialogOptions, { dialogClass: "login-form-holder" }));
+	$("#webmail-login-form").dialog($.extend({ }, dialogOptions, { dialogClass: "login-form-holder" }));
+	$("#lost-login-form").dialog($.extend({ }, dialogOptions, { dialogClass: "login-form-holder" }));
+	$( "a#cp-login-button" ).click(function(e) {
+		e.preventDefault();
+		$( "#webmail-login-form" ).dialog( "open" );
+	});
+	$( "a#webmail-login-button" ).click(function(e) {
+		e.preventDefault();
+		$( "#cp-login-form" ).dialog( "open" );
+	});
+	$( "a#lost-login-button" ).click(function(e) {
+		e.preventDefault();
+		$( "#lost-login-form" ).dialog( "open" );
+	});
+	$( "#plan1-open" ).click(function(e) {
+		e.preventDefault();
+		$( "#plan1-info" ).dialog( "open" );
+	});
+	$( "#plan2-open" ).click(function(e) {
+		e.preventDefault();
+		$( "#plan2-info" ).dialog( "open" );
+	});
+	$( "#plan3-open" ).click(function(e) {
+		e.preventDefault();
+		$( "#plan3-info" ).dialog( "open" );
+	});
+	$( "#plan4-open" ).click(function(e) {
+		e.preventDefault();
+		$( "#plan4-info" ).dialog( "open" );
+	});
+	$( "#plan5-open" ).click(function(e) {
+		e.preventDefault();
+		$( "#plan5-info" ).dialog( "open" );
+	});
+	$( "#plan6-open" ).click(function(e) {
+		e.preventDefault();
+		$( "#plan6-info" ).dialog( "open" );
+	});
+	$(window).resize(function(e){
+		$(".ui-dialog-content").dialog("close");
+	});
+});
+$(function() {
+$('#t-login').on('click',function(e){
+   	e.preventDefault();
+});
+$('#t-language').on('click',function(e){
+   	e.preventDefault();
+});
+	$('#main-nav').meanmenu();
+	$("#domain_id").selectbox();
+	$("#country_id").selectbox({
+		classHolder: 'sbHolder-country'	
+	});
+	$( "#slider" ).slider({
+		value:1,
+		min: 1,
+		max: 10,
+		step: 1
+	});
+	$('#top-search input').on('click',function(e){
+		$('#top-search .tld-quick-search').toggle();
+	});
+});
+</script>
+
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" >

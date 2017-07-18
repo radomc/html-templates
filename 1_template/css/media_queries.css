@@ -1,0 +1,400 @@
+@media only screen and (max-width: 980px) {
+.compare-big-text-includes li {
+margin: 0 1% 8px 11%;
+width: 37%;
+}
+}
+@media only screen and (max-width: 960px) {
+.plan-box-2-col .plan-box {
+text-align:center;
+}
+.plan-box-2-col .heading {
+float:none;
+}
+.plan-box-2-col .title {
+min-height: 38px;
+}
+.plan-box-2-col .fee {
+float: none;
+overflow: hidden;
+text-align: left;
+margin: 0 auto 5px;
+width: 250px;
+}
+.plan-box-2-col .fee .price {
+display:inline-block;
+}
+.plan-box-2-col .fee .price-period {
+display:inline-block;
+}
+.plan-box-2-col .fee a {
+margin-top: 0px;
+vertical-align: 6px;
+float:right;
+}
+.plan-box-2-col .fee .price-period {
+margin-right:20px;
+}
+.plan-box-2-col .inner-col {
+width: 215px;
+text-align:left;
+float:none;
+}
+.plan-box-2-col .inner-col:first-of-type, .plan-box-2-col .inner-col:last-of-type {
+margin: 0 auto;
+}
+.plan-box-2-col p {
+display: inline-block;
+text-align: left;
+width: 215px;
+}
+}
+@media only screen and (max-width: 860px) {
+.footer-box-5-col .five-columns .col {
+text-align: center;
+width: 31%;
+margin-bottom:15px;
+}
+.footer-box-5-col .five-columns .col:nth-of-type(3):after {
+content:"";
+display:block;
+height:0;
+}
+.footer-box-5-col .five-columns .col:nth-of-type(4), .footer-box-5-col .five-columns .col:nth-of-type(5) {
+width: 48%;
+}
+}
+@media only screen and (max-width: 850px) {
+.plan-box-3-col .three-columns .col {
+float:none;
+width:100%;
+margin:0;
+}
+.plan-box-3-col .plan-box {
+margin: 0 auto 20px;
+max-width: 360px;
+text-align: center;
+width: 95%;
+}
+.plan-box-3-col .col:last-of-type .plan-box {
+margin-bottom: 0;
+}
+.plan-box-3-col .title {
+min-height: 38px;
+}
+.plan-box-3-col .fee {
+margin: 0 auto 5px;
+width: 250px;
+}
+.plan-box-3-col .fee a {
+margin-top: 0px;
+vertical-align: 6px;
+}
+.plan-box-3-col .fee .price-period {
+margin-right:20px;
+}
+.plan-box-3-col ul {
+margin: 0 auto;
+width: 215px;
+text-align:left;
+}
+}
+@media only screen and (max-width: 780px) {
+.plan-box-2-col .two-columns .col {
+float:none;
+width:100%;
+margin:0;
+}
+.plan-box-2-col .plan-box {
+margin: 0 auto 20px;
+max-width: 360px;
+width: 95%;
+}
+}
+@media only screen and (max-width: 680px) {
+.footer-box-4-col .four-columns .col {
+text-align: center;
+width: 48%;
+margin-bottom: 12px;
+}
+.heading-box-video .two-columns .col {
+float: none;
+margin: 0%;
+width: 100%;
+}
+.domains-results .d-free, .domains-results .d-trans {
+display: block;
+}
+.domains-results table td:nth-of-type(2) {
+width:110px;
+}
+.domains-results table td:nth-of-type(3) {
+width:70px;
+}
+.compare-plans-big-4 .table-holder {
+overflow-x: scroll;
+}
+.compare-plans-big-4 table {
+width: 680px;
+}
+.compare-plans-big-4 .swipe-to-view {
+display:block;
+}
+}
+@media only screen and (max-width: 620px) {
+.domains-results table td:nth-of-type(1) {
+max-width: 230px;
+}
+}
+@media only screen and (max-width: 600px) {
+.text-box-3-col .three-columns .col {
+float: none;
+margin: 0 0 25px;
+width: 100%;
+}
+.text-box-3-col .three-columns .col:last-of-type {
+margin-bottom:0;
+}
+#copyright .wrapper {
+text-align: center;
+}
+#bottom-copy {
+float: none;
+}
+#bottom-terms {
+float: none;
+}
+#bottom-terms a {
+float: none;
+margin-top:5px;
+margin-bottom:15px;
+}
+.top-box-dc-page .two-wide-columns .wide-col {
+float: none;
+margin: 0;
+width: 100%;
+}
+.top-box-dc-page .two-wide-columns .col {
+float: none;
+margin: 0;
+width: 100%;
+text-align: center;
+}
+.top-box-dc-page a.button {
+margin: 15px 5px 0px;
+width: 150px;
+}
+.compare-plans-big-3 .table-holder {
+overflow-x: scroll;
+}
+.compare-plans-big-3 table {
+width: 580px;
+}
+.compare-plans-big-3 .swipe-to-view {
+display:block;
+}
+.login-form input {
+width: 96%;
+}
+.compare-big-text-includes li {
+margin: 0 0 8px 6%;
+width: 44%;
+}
+.compare-big-icon-includes li {
+width: 25%;
+}
+}
+@media only screen and (max-width: 515px) {
+.text-box-2-col .two-columns .col {
+float: none;
+margin: 0 0 25px;
+width: 100%;
+}
+.text-box-2-col .two-columns .col:last-of-type {
+margin-bottom:0;
+}
+.footer-box-5-col .five-columns .col {
+width: 48%;
+}
+.footer-box-3-col .three-columns .col {
+margin-bottom: 10px;
+width: 48%;
+}
+h1 {
+text-align:center;
+}
+.top-box-tour-page {
+text-align:center;
+}
+.top-box-tour-page a.button {
+font-size: 14px;
+padding: 8px 0 7px;
+}
+.top-box-tour-page p {
+text-align:left;
+}
+.domains-results table td {
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+display: block;
+}
+.domains-results table td:nth-of-type(1) {
+text-align: center;
+max-width: 415px;
+padding: 10px 0;
+}
+.domains-results .d-free, .domains-results .d-trans {
+display: inline;
+}
+.domains-results table td:nth-of-type(2) {
+display: inline-block;
+margin-bottom: 5px;
+padding-top: 0;
+text-align: left;
+width: 48%;
+}
+.domains-results table td:nth-of-type(3) {
+display: inline-block;
+margin-bottom: 5px;
+padding-top: 0;
+width: 50%;
+}
+.login-form h2, .login-form .lost-pass {
+text-align:center;
+}
+.login-form label {
+display:none;
+}
+.login-form .col {
+width:100%;
+margin: 16px 0 0;
+}
+.login-form input {
+width: 280px;
+display:inline-block;
+}
+.login-form a.button {
+margin-bottom:15px;
+}
+}
+@media only screen and (max-width: 479px) {
+.domain-search-box table td:nth-of-type(1), 
+.domain-search-box table td:nth-of-type(2) {
+display: block;
+text-align: center;
+padding:0;
+width: 100%;
+min-width: auto;
+}
+.domain-search-box input {
+width: 85%;
+margin: 0px;
+}
+.domain-search-box .button {
+margin: 20px 0 8px;
+width: 130px;
+}
+.domain-search-box p {
+text-align: center;
+}
+.top-box-plan-page .heading {
+float: none;
+text-align: center;
+}
+.top-box-plan-page .fee {
+float: none;
+margin-top: 15px;
+text-align: center;
+}
+.top-box-tour-page {
+text-align: center;
+}
+.top-box-tour-page a.button {
+margin: 0 auto 15px;
+width: 50%;
+}
+.contact-form label {
+width: 33%;
+}
+.contact-form input, .contact-form textarea, .sbHolder {
+width: 65%;
+}
+.tld-page-top-box .left-box {
+width: 40%;
+}
+.tld-page-top-box .right-box {
+width: 60%;
+}
+.tld-page-other-tlds-box .row {
+margin-bottom: 12px;
+margin-top: 10px;
+}
+.tld-page-other-tlds-box .tld-class, .tld-page-other-tlds-box .tlds  {
+float: none;
+width: 100%;
+}
+.top-domains-box .four-columns .col {
+margin: 0 0 10px;
+width:50%;
+}
+.top-domains-box .five-columns .col:nth-of-type(1), .top-domains-box .five-columns .col:nth-of-type(2) {
+margin: 0 0 10px;
+width:50%;
+}
+.top-domains-box .five-columns .col:nth-of-type(3), .top-domains-box .five-columns .col:nth-of-type(4), .top-domains-box .five-columns .col:nth-of-type(5) {
+margin: 0 0 10px;
+width:33.3%;
+}
+.compare-plans-big-2 .table-holder {
+overflow-x: scroll;
+}
+.compare-plans-big-2 table {
+width: 460px;
+}
+.compare-plans-big-2 .swipe-to-view {
+display:block;
+}
+header {
+min-height: 135px;
+}
+#logo {
+float: none;
+text-align: center;
+}
+.compare-big-text-includes li {
+margin: 0 0 8px 15%;
+width: 85%;
+}
+.compare-big-icon-includes li {
+width: 33.33333333%;
+}
+.domains-results table td:nth-of-type(1) {
+max-width: 340px;
+}
+}
+@media only screen and (max-width: 400px) {
+.plan-box .title {
+min-height: 0;
+}
+.plan-box .fee {
+margin: 10px auto 5px;
+text-align: center;
+}
+.plan-box .fee .price {
+text-align: center;
+}
+.plan-box .fee .price-period {
+display: block;
+margin: 0 auto;
+text-align: center;
+}
+.plan-box .fee a {
+float: none;
+margin: 15px 0 5px;
+padding: 6px 23px;
+}
+.domains-results table td:nth-of-type(1) {
+max-width: 260px;
+}
+}

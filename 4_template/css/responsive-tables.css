@@ -1,0 +1,28 @@
+
+	.pinned { position: absolute; left: 0; top: 0px; width: 23%;  overflow: hidden; overflow-x: hidden; border-right: 0px solid #ccc; border-left: 0px solid #ccc; }
+	.pinned table { border-right: none; border-left: none; width: 100%; }
+	.pinned table th, .pinned table td { white-space: normal; }
+	.pinned td:last-child { border-bottom: 0; }
+	
+	div.table-wrapper { position: relative; margin-bottom: 0px; overflow: hidden; border-right: 0px solid #000; }
+	div.table-wrapper div.scrollable { margin-left: 23%; }
+	div.table-wrapper div.scrollable { overflow: scroll; overflow-y: hidden; }	
+	
+	.scrollable .responsive td, .scrollable.responsive th { position: relative;  overflow: hidden; }
+	.scrollable .responsive th:first-child, .scrollable .responsive td:first-child, .scrollable .responsive td:first-child, .scrollable .responsive.pinned td { display: none; }
+
+	.scrollable .responsive {min-width: 500px;}
+	
+.big-compare div.table-wrapper div.scrollable {margin-left: 33%;}
+.big-compare .scrollable table	{ background:#E0E0E0; border-spacing: 2px 0;}
+.big-compare .pinned {width: 36%;}
+.big-compare .pinned table tr.category-row td {padding-left:15px;}
+	
+.big-compare-4 .scrollable .responsive {width:800px;}
+.big-compare-3 .scrollable .responsive {width:700px;}
+
+@media only screen and (max-width: 500px) {
+.big-compare table tr.category-row td { font-size:14px; }
+.big-compare div.table-wrapper div.scrollable { margin-left: 46%; }
+.big-compare .pinned { width: 52%; }
+}

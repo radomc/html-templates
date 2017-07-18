@@ -1,0 +1,103 @@
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet'>
+<link rel="stylesheet" href="/css/styles.css">
+<link rel="stylesheet" href="/css/colors.css">
+<link rel="stylesheet" href="/css/jquery.selectbox.css">
+<link rel="stylesheet" href="/css/select2.css">
+<link rel="stylesheet" href="/css/meanmenu.css">
+<link rel="stylesheet" href="/css/media_queries.css">
+
+
+<script src="/js/jquery-1.11.1.min.js"></script>
+<script src="/js/jquery-ui-1.9.2.custom.js"></script>
+<script src="/js/jquery.selectbox-0.2.js"></script>
+<script src="/js/select2.min.js"></script>
+<script src="/js/jquery.meanmenu.js"></script>
+
+
+
+<script>
+function format(state) {
+var originalOption = state.element;
+ return "<img class='lang-flag' src='images/" + $(originalOption).data('img') + ".png' alt='" + state.id.toLowerCase() + "'>" + state.text;
+}
+$(function() {
+    $("#top-lang-selector").select2({
+		formatResult: format,
+		formatSelection: format,
+		escapeMarkup: function(m) { return m; }
+    });
+	$('nav').meanmenu();
+	$("#domain_id").selectbox();
+	$("#country_id").selectbox({
+		classHolder: 'sbHolder-country'	
+	});
+});
+
+function updateUI(doit){
+	if($(window).width() <= doit){
+		tabsToAccordions();
+	} else {
+		accordionsToTabs();
+	}
+}
+function tabsToAccordions(){
+	$("#domain_id").selectbox("detach");
+	$(".tabs").each(function(){
+		var a = $('<div class="accordion">');
+		var b = new Array();
+		$(this).find('>ul>li').each(function(){
+			b.push('<h3>'+$(this).html()+'</h3>');
+		});
+		var c = new Array();
+		$(this).find('>div').each(function(){
+			c.push('<div>'+$(this).html()+'</div>');
+		});
+		for(var i = 0; i < b.length; i++){
+			a.append(b[i]).append(c[i]);
+		}
+		$(this).before(a);
+		$(this).remove();
+	});
+	$("#domain_id").selectbox("attach");
+	$('.accordion').accordion({
+		collapsible: true,
+		heightStyle: "content"
+	});
+}
+function accordionsToTabs(){
+	$("#domain_id").selectbox("detach");
+	$('.accordion').each(function(){
+		var a = $('<div class="tabs">');
+		var count = 0;
+		var b = $('<ul>');
+		$(this).find('>h3').each(function(){
+			count++;
+			b.append('<li><a href="#tabs-'+count+'">'+$(this).text()+'</a></li>');
+		});
+		var count = 0;
+		var c = $('');
+		$(this).find('>div').each(function(){
+			count++;
+			c=c.add('<div id="tabs-'+count+'">'+$(this).html()+'</div>');
+		});
+		a.append(b).append(c);
+		$(this).before(a);
+		$(this).remove();
+	});
+	$("#domain_id").selectbox("attach");
+	$('.tabs').tabs();
+	
+	$('#search-input').on('click',function(e){
+		$('.tld-quick-search').toggle();
+	});
+}
+$(document).ready(function(){
+	updateUI('860');
+	$(window).resize(function(e){
+		updateUI('860');
+		$("#top-lang-selector").select2("close");	
+	});
+});
+</script>
+
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" >

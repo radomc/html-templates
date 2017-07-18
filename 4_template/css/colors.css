@@ -1,0 +1,452 @@
+/*	a	color:#860000;
+		:hover #FF8B00
+	borders: #DDDDDD;
+	#top-social color:#333333
+	navigation	background:#AA1801
+		logo a	background:#901102
+				color:#FFFFFF;
+		borders 	rgba(0, 0, 0, 0.2)
+		#top-search		background: #911402;
+			input	background:rgba(0, 0, 0, 0)
+					$color:#FFFFFF
+			.tld-quick-search	background:#F0F0F0
+				border-color:#888888
+				.tld-free	color: #709E3A
+		main-nav ul>li>a 	color:#FFFFFF;
+						:hover background-color: rgba(0, 0, 0, 0.1);
+				 ul>li>ul	background:#F0F0F0;
+							border:#777777;
+				 login-button	background:#C43B01
+					:hover #F36A02
+				 language-button	background:#D55201;
+					:hover	#F36A02
+				 ul>li>ul>li>a	color	 #777777
+								:hover	#FF8B00;
+	section		background:#F7F7F7
+	footer	background #252525
+			border:#333333;
+			color: #BBBBBB;
+			phone	color:#FFFFFF
+			flogo	color:#FFFFFF
+			h4	color: #FFFFFF;
+			terms	color:#BBBBBB;
+	a.button
+	swipe-to-view	background:#F36A02;
+				color: #FFFFFF;
+	domain-search-box	background:#252525
+		h2 #FFFFFF
+		h4 #FFFFFF
+		input background #FFFFFF
+	.ui-slider
+		scale	color:#777777;
+		box	background:#FFFFFF;
+		button-container	background:#F5FBFF;
+			color:#555555;
+	.plan-box big-button  	border-right-color:#BD7900;
+		border-left-color:#FAD579;
+	.ui-widget-overlay	background:rgba(0,0,0,0.5)
+	.ui-dialog	background:#FFFFFF;
+	.small-login-form  input background:#F7F7F7;
+	.big-compare table nth-of-type(2n)	background:#F5FBFF;
+					 nth-of-type(2n+1)	background:#FFFFFF;
+					buy-row	background:#F0F0F0;
+					category-row	background:#E0E0E0;
+					price color: #009966;
+					price period color:#333333;
+		big-compare-plan-banner .descr color:#777777;
+			price .from, price .period color:#333333;
+			value	color: #009966;
+		plan-box-long	banner background:#FFFFFF;
+							featured color:#FFFFFF;
+								background: gradient
+								price .from, price .period color:#333333;
+								value	color: #009966;
+								buy-line	background: #F0F0F0;
+								left-color #E7E7E7
+	short-plan-compares  h3 background:#F36A02;
+							color:#FFFFFF;
+						 price background:#F0F0F0;
+						 value color: #007744;
+						 period color:#333333;
+						 li:nth-of-type(2n) background:#FFFFFF;
+						 li:nth-of-type(2n+1) background:#F5FBFF;
+						 buy-line background:#F0F0F0;
+	domain-banner background:#333333;
+		single-tld 	border-color:#CCCCCC;
+					background:#F0F0F0;
+			h3 	color:#F36A02;
+			value color:#007744;
+	contact-box background:#C0C0C0		
+	domain-info-table 	border-color:#333333;
+						nth-of-type(2n) background:#F5FBFF;
+						nth-of-type(2n+1) background:#FFFFFF;
+						theading background:#E0E0E0;
+						theading :last-of-type background:#F0F0F0;
+		table-holder background:#F0F0F0;
+	image-title-text .descr color:#333333;
+	text-box p color:#333333;
+	video	background:#999999;
+	.play-button
+}
+*/
+a {
+color:#860000;
+}
+a:hover {
+color: #FF8B00;
+}
+h2 a, h2 a:hover, h3 a, h3 a:hover, h4 a, h4 a:hover {
+color:#000000;
+}
+#top-social {
+color:#333333;
+}
+nav.big-nav {
+background:#AA1801;
+}
+#logo a {
+background:#901102;
+color:#FFFFFF;
+border-right-color:rgba(0, 0, 0, 0.2);
+}
+.search-field {
+background-color: #911402;
+box-shadow: 0 1px rgba(255, 255, 255, 0.1), 0 1px rgba(0, 0, 0, 0.2) inset;
+}
+#top-search input {
+background:rgba(0, 0, 0, 0);
+color:#FFFFFF;
+}
+#top-search .tld-quick-search {
+background:#F0F0F0;
+border-color:#888888;
+}
+#top-search .tld-quick-search .tld-free a {
+color: #709E3A;
+}
+#main-nav ul>li>a {
+color:#FFFFFF;
+border-left-color:rgba(0, 0, 0, 0.2);
+box-shadow: 1px 0 rgba(255, 255, 255, 0.1) inset;
+}
+#main-nav ul>li:hover>a {
+background-color: rgba(0, 0, 0, 0.1);
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.2) inset;
+}
+#main-nav ul>li>ul {
+background:#F0F0F0;
+border-right-color:#777777;
+}
+#login-button {
+background:#C43B01;
+}
+#main-nav ul>li#login-button:hover> a {
+background-color: #F36A02;
+}
+#language-button {
+background:#D55201;
+}
+#main-nav ul>li#language-button:hover> a {
+background-color: #F36A02;
+}
+#main-nav>ul>li:hover>a:after {
+border-color: transparent transparent #F0F0F0; 
+}
+#main-nav ul>li>ul>li>a {
+color: #777777;
+}
+#main-nav ul>li>ul>li:hover>a {
+color:#FF8B00;
+}
+#main-nav ul>li>ul>li:hover>a:after {
+border-color: transparent #777777 transparent transparent;
+}
+section {
+background:#F7F7F7;
+}
+section .wrapper > div {
+border-bottom-color:#DDDDDD;
+}
+footer {
+border-color:#333333;
+background:#252525;
+}
+footer h4 {
+color: #FFFFFF;
+}
+footer ul li a {
+color: #BBBBBB;
+}
+footer span {
+color: #BBBBBB;
+}
+footer .phone {
+color:#FFFFFF;
+}
+footer span a {
+color: #BBBBBB;
+}
+.f-logo {
+color: #FFFFFF;
+}
+#copyright {
+background:#252525;
+}
+#bottom-copy p {
+color: #BBBBBB;
+}
+#bottom-terms a {
+border-right-color:#BBBBBB;
+color: #BBBBBB;
+}
+a.button {
+background: #feca32;
+background: -moz-linear-gradient(top,  #feca32 0px, #e9a324 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0px,#feca32), color-stop(100%,#e9a324));
+background: -webkit-linear-gradient(top,  #feca32 0px,#e9a324 100%);
+background: -o-linear-gradient(top,  #feca32 0px,#e9a324 100%);
+background: -ms-linear-gradient(top,  #feca32 0px,#e9a324 100%);
+background: linear-gradient(to bottom,  #feca32 0px,#e9a324 100%);
+border: 1px solid #BD7900;
+color: #5B3C00;
+}
+a.button:hover {
+background: #fcca41;
+background: -moz-linear-gradient(top,  #fcca41 0%, #fcae28 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fcca41), color-stop(100%,#fcae28));
+background: -webkit-linear-gradient(top,  #fcca41 0%,#fcae28 100%);
+background: -o-linear-gradient(top,  #fcca41 0%,#fcae28 100%);
+background: -ms-linear-gradient(top,  #fcca41 0%,#fcae28 100%);
+background: linear-gradient(to bottom,  #fcca41 0%,#fcae28 100%);
+}
+.swipe-to-view {
+background:#F36A02;
+color:#FFFFFF;
+}
+.contact-box h2 {
+border-bottom-color:#DDDDDD;
+}
+.contact-box .form-wrapper {
+background:#C0C0C0;
+}
+.contact-box input, .contact-box textarea {
+border-color:#DDDDDD;;
+}
+.domain-search-box {
+background:#252525;
+}
+.domain-search-box h2 {
+color:#FFFFFF;
+}
+.domain-search-box h4 {
+color:#FFFFFF;
+}
+.domain-search-box .search-field-holder input {
+background:#FFFFFF;
+}
+.ui-slider{
+border-top-color:#003D6B;
+background: #005c99;
+background: -moz-linear-gradient(top,  #005c99 0%, #0c6eab 13%, #0c6ca8 50%, #09548c 88%, #004982 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#005c99), color-stop(13%,#0c6eab), color-stop(50%,#0c6ca8), color-stop(88%,#09548c), color-stop(100%,#004982));
+background: -webkit-linear-gradient(top,  #005c99 0%,#0c6eab 13%,#0c6ca8 50%,#09548c 88%,#004982 100%);
+background: -o-linear-gradient(top,  #005c99 0%,#0c6eab 13%,#0c6ca8 50%,#09548c 88%,#004982 100%);
+background: -ms-linear-gradient(top,  #005c99 0%,#0c6eab 13%,#0c6ca8 50%,#09548c 88%,#004982 100%);
+background: linear-gradient(to bottom,  #005c99 0%,#0c6eab 13%,#0c6ca8 50%,#09548c 88%,#004982 100%);
+}
+.ovz-slider-box .slider-container {
+border-bottom-color:#DDDDDD;
+}
+.scale span {
+color:#777777;
+}
+.ovz-slider-box .ovz-box {
+background:#FFFFFF;
+border-color:#DDDDDD;
+}
+.ovz-slider-box .button-container {
+background:#F5FBFF;
+}
+.ovz-slider-box .button-container .name, .ovz-slider-box .button-container .name a {
+color:#555555;
+}
+.ovz-slider-box .button-container .price {
+color:#555555;
+}
+.ovz-slider-box .button-container .managed {
+color:#555555;
+}
+.ovz-slider-box .button-container .features {
+color:#555555;
+}
+.plan-box a.button .value {
+border-right-color:#BD7900;
+}
+.plan-box a.button .buy-text {
+border-left-color:#FAD579;
+}
+.ui-widget-overlay {
+background:rgba(0,0,0,0.5);
+}
+.ui-dialog {
+background:#FFFFFF;
+}
+.small-login-form h2 {
+border-bottom-color:#DDDDDD;
+}
+.small-login-form input {
+border-color:#DDDDDD;
+background:#F7F7F7;
+}
+.big-compare table tr:nth-of-type(2n) td {
+background:#F5FBFF;
+}
+.big-compare table tr:nth-of-type(2n+1) td {
+background:#FFFFFF;
+}
+.big-compare table td {
+border-bottom-color:#DDDDDD;
+}
+.big-compare table tr.buy-row td {
+background:#F0F0F0;
+}
+.big-compare table tr.category-row td {
+background:#E0E0E0;
+}
+.big-compare .period {
+color:#333333;
+}
+.big-compare .price {
+color: #009966;
+}
+.big-compare-plan-banner .image-holder {
+background:#F0F0F0;
+}
+.big-compare-plan-banner .descr {
+color:#777777;
+}
+.big-compare-plan-banner .price .from, .big-compare-plan-banner .price .period {
+color:#333333;
+}
+.big-compare-plan-banner .price .value {
+color: #009966;
+}
+.plan-box-long tr:nth-of-type(2n) td:first-of-type {
+background:#E7E7E7;
+}
+.plan-box-long tr:nth-of-type(2n+1) td:first-of-type {
+background:#E7E7E7;
+}
+.plan-box-long table tr.category-row td:first-of-type {
+background:#E0E0E0;
+}
+.plan-box-long .plan-box-long-banner {
+background:#FFFFFF;
+}
+.plan-box-long .plan-box-long-banner .featured {
+color:#FFFFFF;
+background: #3dc0f1;
+background: -moz-linear-gradient(top,  #3dc0f1 0%, #3b9abe 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#3dc0f1), color-stop(100%,#3b9abe));
+background: -webkit-linear-gradient(top,  #3dc0f1 0%,#3b9abe 100%);
+background: -o-linear-gradient(top,  #3dc0f1 0%,#3b9abe 100%);
+background: -ms-linear-gradient(top,  #3dc0f1 0%,#3b9abe 100%);
+background: linear-gradient(to bottom,  #3dc0f1 0%,#3b9abe 100%);
+}
+.plan-box-long .plan-box-long-banner .from, .plan-box-long .plan-box-long-banner .period {
+color:#333333;
+}
+.plan-box-long .plan-box-long-banner .value {
+color: #009966;
+}
+.plan-box-long .plan-box-long-banner .buy-line {
+background: #F0F0F0;
+}
+.short-plan-compares .service-inner {
+border-color:#DDDDDD;
+}
+.short-plan-compares .service-inner > *, .short-plan-compares .service-inner ul > li {
+border-bottom-color:#DDDDDD;
+}
+.short-plan-compares h3 {
+background:#F36A02;
+color:#FFFFFF;
+}
+.short-plan-compares h3 a, .short-plan-compares h3 a:hover {
+color:#FFFFFF;
+}
+.short-plan-compares .price {
+background:#F0F0F0;
+}
+.short-plan-compares .value {
+color: #007744;
+}
+.short-plan-compares .period {
+color:#333333;
+}
+.short-plan-compares ul li:nth-of-type(2n) {
+background:#FFFFFF;
+}
+.short-plan-compares ul li:nth-of-type(2n+1) {
+background:#F5FBFF;
+}
+.short-plan-compares .buy-line {
+background:#F0F0F0;
+}
+.domain-banner {
+background:#333333;
+}
+.domain-banner .single-tld {
+border-color:#CCCCCC;
+background:#F0F0F0;
+}
+.domain-banner h3, .domain-banner h3 a {
+color:#F36A02;
+}
+.domain-banner .value {
+color:#007744;
+}
+.domain-info-table .table-wrapper {
+border-color:#333333;
+}
+.domain-info-table td {
+border-bottom-color:#DDDDDD;
+}
+.domain-info-table table tr:nth-of-type(2n) td {
+background:#F5FBFF;
+}
+.domain-info-table table tr:nth-of-type(2n+1) td {
+background:#FFFFFF;
+}
+.domain-info-table table tr.theading td {
+background:#E0E0E0;
+}
+.domain-info-table table tr.theading td:last-of-type {
+background:#F0F0F0;
+}
+.domain-info-table table tr td.table-holder {
+background:#F0F0F0;
+}
+.image-title-text .descr {
+color:#333333;
+}
+.text-box p {
+color:#333333;
+}
+.video-play-box .video-play-thumb {
+background:#999999;
+}
+.play-button span {
+border-color: rgba(255, 255, 255, 0.8);
+background-color: rgba(0, 0, 0, 0.6);
+}
+.play-button span:hover {
+background-color: rgba(0, 0, 0, 0.8);
+border-color: rgba(255, 255, 255, 0.95);
+}
+.play-button span:after {
+border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #FFFFFF;
+}
+.video-thumb-box .video-thumb-small {
+background:#999999;
+}

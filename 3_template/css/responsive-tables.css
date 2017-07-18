@@ -1,0 +1,19 @@
+
+	.pinned { position: absolute; left: 0; top: 0px; width: 23%;  overflow: hidden; overflow-x: hidden; border-right: 0px solid #ccc; border-left: 0px solid #ccc; }
+	.pinned table { border-right: none; border-left: none; width: 100%; }
+	.pinned table th, .pinned table td { white-space: normal; }
+	.pinned td:last-child { border-bottom: 0; }
+	
+	div.table-wrapper { position: relative; margin-bottom: 0px; overflow: hidden; border-right: 0px solid #000; }
+	div.table-wrapper div.scrollable { margin-left: 23%; }
+	div.table-wrapper div.scrollable { overflow: scroll; overflow-y: hidden; }	
+	
+	.scrollable .responsive td, .scrollable.responsive th { position: relative;  overflow: hidden; }
+	.scrollable .responsive th:first-child, .scrollable .responsive td:first-child, .scrollable .responsive td:first-child, .scrollable .responsive.pinned td { display: none; }
+
+	.scrollable .responsive {min-width: 500px;}
+	
+	
+#domain-plus-hosting .scrollable .responsive {width:700px;}
+#domain-only .scrollable .responsive {width:700px;}
+#domain-tld-details .scrollable .responsive {width:800px;}

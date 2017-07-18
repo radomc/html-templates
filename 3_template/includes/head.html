@@ -1,0 +1,200 @@
+<link rel="stylesheet" href="/css/styles.css">
+<link rel="stylesheet" href="/css/jquery.selectbox.css">
+<link rel="stylesheet" href="/css/responsive-tables.css">
+<link rel="stylesheet" href="/css/colors.css">
+<link rel="stylesheet" href="/css/meanmenu.css">
+<link rel="stylesheet" href="/css/media_queries.css">
+
+
+<script src="/js/jquery-1.11.1.min.js"></script>
+<script src="/js/jquery.selectbox-0.2.js"></script>
+<script src="/js/jquery-ui-1.10.4.custom.js"></script>
+<script src="/js/jquery.jcarousel.js"></script>
+<script src="/js/responsive-tables.js"></script>
+<script src="/js/jquery.meanmenu.js"></script>
+
+
+
+<script>
+$(function() {
+	$('nav').meanmenu();
+	$("#domain_id").selectbox({
+		effect: "fade"
+	});
+	$("#country_id").selectbox({
+		classHolder: 'sbHolder-country',
+		effect: "fade"
+	});
+});
+
+function updateUI(doit){
+	if($(window).width() <= doit){
+		tabsToAccordions();
+	} else {
+		accordionsToTabs();
+	}
+}
+function tabsToAccordions(){
+	$(".tabs").each(function(){
+		var a = $('<div class="accordion">');
+		var b = new Array();
+		$(this).find('>ul>li').each(function(){
+			b.push('<h3>'+$(this).html()+'</h3>');
+		});
+		var c = new Array();
+		$(this).find('>div').each(function(){
+			c.push('<div>'+$(this).html()+'</div>');
+		});
+		for(var i = 0; i < b.length; i++){
+			a.append(b[i]).append(c[i]);
+		}
+		$(this).before(a);
+		$(this).remove();
+	});
+	$('.accordion').accordion({
+		collapsible: true,
+		heightStyle: "content"
+	});
+}
+function accordionsToTabs(){
+	$('.accordion').each(function(){
+		var a = $('<div class="tabs">');
+		var count = 0;
+		var b = $('<ul>');
+		$(this).find('>h3').each(function(){
+			count++;
+			b.append('<li><a href="#tabs-'+count+'">'+$(this).text()+'</a></li>');
+		});
+		var count = 0;
+		var c = $('');
+		$(this).find('>div').each(function(){
+			count++;
+			c=c.add('<div id="tabs-'+count+'">'+$(this).html()+'</div>');
+		});
+		a.append(b).append(c);
+		$(this).before(a);
+		$(this).remove();
+	});
+	$('.tabs').tabs();
+}
+$(document).ready(function(){
+	$(window).resize(function(e){
+		updateUI('720');
+	});
+	updateUI('720');
+});
+(function($) {
+    $(function() {
+        $('.jcarousel')
+		    .on('jcarousel:create jcarousel:reload', function() {
+        var element = $(this),
+            width = element.innerWidth();
+        element.jcarousel('items').css('width', width + 'px');
+			})
+            .jcarousel({
+                wrap: 'circular'
+            });
+        $('.jcarousel-control-prev')
+            .jcarouselControl({
+                target: '-=1'
+            });
+        $('.jcarousel-control-next')
+            .jcarouselControl({
+                target: '+=1'
+            });
+        $('.jcarousel-pagination')
+            .on('jcarouselpagination:active', 'li', function() {
+                $(this).addClass('active');
+            })
+            .on('jcarouselpagination:inactive', 'li', function() {
+                $(this).removeClass('active');
+            })
+            .jcarouselPagination({
+				'perPage': 1,
+				'item': function(page, carouselItems) {
+					return '<li><a href="#' + page + '"></a></li>';
+				}
+            });
+    });
+})(jQuery);
+
+$(function() {		
+	var dialogOptions = {
+		autoOpen: false,
+		closeOnEscape: true,
+		draggable: false,
+		resizable: false,
+		modal: true,
+		closeText: "",
+		open: function( event, ui ) {
+			$('body').addClass('stop-scrolling');
+		},
+		close: function( event, ui ) {
+			$('body').removeClass('stop-scrolling');
+		}
+	};
+	$( ".dialog" ).dialog($.extend({ }, dialogOptions));
+	$( document ).on("click", ".ui-widget-overlay",function(){
+		$(".ui-dialog-content").dialog("close");
+	});
+	$( "#plan1-open" ).click(function(e) {
+		e.preventDefault();
+		$( "#plan1-info" ).dialog( "open" );
+	});
+	$( "#plan2-open" ).click(function(e) {
+		e.preventDefault();
+		$( "#plan2-info" ).dialog( "open" );
+	});
+	$( "#plan3-open" ).click(function(e) {
+		e.preventDefault();
+		$( "#plan3-info" ).dialog( "open" );
+	});
+	$( "#plan5-open" ).click(function(e) {
+		e.preventDefault();
+		$( "#plan5-info" ).dialog( "open" );
+	});
+	$( "#plan6-open" ).click(function(e) {
+		e.preventDefault();
+		$( "#plan6-info" ).dialog( "open" );
+	});
+	$( "#text1-open" ).click(function(e) {
+		e.preventDefault();
+		$( "#text1-info" ).dialog( "open" );
+	});
+	$(window).resize(function(e){
+		$(".ui-dialog-content").dialog("close");
+	});
+});
+$(function() {
+	$("#login").on( "click", function(e) {
+		e.preventDefault();
+		$(".login-box").fadeToggle("fast");
+	});	
+	$(".webmail-button").on("click", function(e) {
+		e.preventDefault();
+		$(".login-form").slideUp();
+		$(".webmail-form").slideDown();
+	});
+	$(".lost-pass-button").on("click", function(e) {
+		e.preventDefault();
+		$(".login-form").slideUp();
+		$(".lost-pass-form").slideDown();
+	});
+	$(".back-login-button").on("click", function(e) {
+		e.preventDefault();
+		if ( $(".webmail-form").is(':visible') ) $(".webmail-form").slideUp();
+		if ( $(".lost-pass-form").is(':visible') ) $(".lost-pass-form").slideUp();
+		$(".login-form").slideDown();
+	});
+	$('body').click(function(e) {
+	var target = $(e.target);
+	if(!target.is('#login') && !target.is('.login-box') && !target.is('.login-box *') ) {
+		if ( $('.login-box').is(':visible') ) {
+			$('.login-box').fadeOut("fast");
+		}
+	}
+	});
+});
+</script>
+
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" >
